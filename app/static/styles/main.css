@@ -20,6 +20,7 @@ body {
     padding-top: 10px;
 }
 
+
 .nav-content .logo-touch-target {
     display: inline-flex;
     height: 60%;
@@ -30,15 +31,14 @@ body {
     height: 60px;
     margin: auto;
 }
-
 .nav-logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
-
 .nav-logo img {
     width: 200px;
+
 }
 
 .nav-content nav {
