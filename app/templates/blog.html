@@ -1,0 +1,62 @@
+{% extends "template.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<div class="coderimage">
+    <img src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80" height="500", width="90000">
+</div>
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5"  >
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading" style="">
+                    <h1>Image Classification in Android Studio</h1>
+                    <span class="meta">
+                        By Andreas Jaramillo
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h4>Inspiration</h4>
+                <p>The inspiration for PhotoLang starts from my journey of learning Chinese. We started to learn Chinese in 9th grade but realized that when We wanted to explore outside of the curriculum, it was difficult. Most language learning apps online approached simple words, often basics that were not spoken often. We felt this lack of physical immersion and cultural integration into the curriculum was limiting the language program. We noticed that over time, there were fewer students who shared the same passion for language learning. We believed this was because students felt the language was disconnected from everyday life, yet compared to other subjects, language can teach the most about how our cultures differ. When seeking solutions, my greatest inspiration was apps like Italki and Babbel for their physiologically sound approach.
+                </p>
+                <h4>Purpose</h4>
+                <p>The concept is based on a study by the National Center for Biotechnology Information. They proved that the use of visual explanations rather than words has improved understanding and memory. Using this idea can also benefit language learning as well. Using images can help to associate the words in that foreign language with that image. Inspired by apps like Photomath, we sought to use image recognition software in a mobile setting. This would allow someone to scan any image in their surroundings and the app will give an immediate translation of the user’s choice. </p>
+                <h4>Impact</h4>
+                <p>PhotoLang brings people together from outside cultures and helps to break down barriers. The flashcard design for memorization allows users to keep track of their images. These can be everyday objects or ones specific to that culture. Language is the link that helps bring people together and build relationships through relatability, and PhotoLang aims to take that one step further. People relate to the objects they see and then learn the nuances in how those translated words differ. In times when the world is so divided, language as a commonality is what can bring people together. 
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+<div class="card text-center">
+    <div class="card-header">
+      Add a New Post
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Enter your information below</h5>
+      <label for="exampleFormControlTextarea1">Name</label>
+      <input type="text" name="name">
+      <br>
+      <label for="exampleFormControlTextarea1">Title</label>
+      <input type="text" name="title">
+      <br>
+      <label for="body_text">Content</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+{% endblock %}

@@ -9,3 +9,6 @@ app = Flask(__name__)
 @app.route('/')
 def index(debug=True): #debug=True prevents us from having to restart the server to see changes. REMOVE LATER.
     return render_template('index.html')
+@app.route('/blog/')
+def blog(debug=True): #debug=True prevents us from having to restart the server to see changes. REMOVE LATER.
+    return render_template('blog.html')    
