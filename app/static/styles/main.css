@@ -6,7 +6,7 @@ body {
   flex-direction: column;
 }
 
-.header {
+.header-one, .header-two {
   height: 72px;
   background: rgb(11, 51, 61);
   color: white;
@@ -87,4 +87,11 @@ a {
   background-size: 25vw;
   background-position: 100% 50%;
   position: relative;
+}
+
+#firstjob, p {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
