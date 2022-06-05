@@ -1,0 +1,91 @@
+{% extends "template.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        .column {
+  float: center;
+  width: 33.33%;
+  text-align: center;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
+.hobbies_pic{
+   width: 18rem;
+}
+  
+    </style>
+</head>
+<header>
+    <div class="coderimage">
+        <img class="fit"src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80" >
+        <h1>Hobbies</h1>
+    </div>
+</header>
+
+<div class="row">
+    <div class="column">
+        <div class="card" style="width: 18rem; margin-left: 50px;">
+            <img class="hobbies_pic" src="../static/img/Jaramillo061.jpg" width="200" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Playing the Saxophone</h5>
+              <p class="card-text">I play the alto saxohphone. My favourite Genre to play is Jazz. Here are some quick facts about my Hobby</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">I have been playing for 7 years</li>
+              <li class="list-group-item">I love to play latin</li>
+              <li class="list-group-item">I also own a tenor saxophone</li>
+            </ul>
+           
+          </div>
+    </div>
+  
+    <div class="column" >
+        <div class="card" style="width: 18rem;">
+            <img class="hobbies_pic" src="../static/img/Jaramillo061.jpg" width="200" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+    </div>
+    <div class="column">
+        <div class="card" style="width: 18rem; margin-right: 10px;">
+            <img class="hobbies_pic" src="../static/img/Jaramillo061.jpg" width="200" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+    </div>
+  </div>
+
+{% endblock %}
