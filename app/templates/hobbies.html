@@ -1,0 +1,80 @@
+{% extends "template.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="../static/styles/hobbies.css">
+  <link rel="stylesheet" href="../static/styles/coderimage.css">
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .column {
+      float: center;
+      width: 33.33%;
+      text-align: center;
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+
+    }
+
+    .hobbies_pic {
+      width: 18rem;
+    }
+  </style>
+</head>
+
+<div class="coderimage">
+  <img src="../static/img/bg.jpg" style="max-width:80%; max-height: 60%;">
+  <div class="background-text">
+    <h1>{{pagetitle}}</h1>
+  </div>
+</div>
+
+<div class="maincolumn">
+  <div class="row">
+    <div class="column">
+      <div class="card" style="width: 18rem; margin-left: 50px;">
+        <img class="hobbies_pic" src="../static/img/Jaramillo061.jpg" width="200" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Playing the Saxophone</h5>
+          <p class="card-text">I play the alto saxohphone. My favourite Genre to play is Jazz. Here are some quick facts
+            about my Hobby</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">I have been playing for 7 years</li>
+          <li class="list-group-item">I love to play latin</li>
+          <li class="list-group-item">I also own a tenor saxophone</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="card" style="width: 18rem; margin-left: 50px;">
+        <img class="hobbies_pic" src="../static/img/piano.jpg" width="200" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Playing the Piano</h5>
+          <p class="card-text">I started playing the piano when I was 11. I stopped playing once I began Uni, I have
+            some rust to brush off.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">I enjoy performing music by ear</li>
+          <li class="list-group-item">My favourite songs to play are Adele songs</li>
+          <li class="list-group-item">Moonlight sonata is one of my favourite songs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

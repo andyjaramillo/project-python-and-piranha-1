@@ -1,0 +1,11 @@
+.column-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.column-two{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

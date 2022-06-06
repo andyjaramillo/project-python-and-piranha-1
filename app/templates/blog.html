@@ -1,0 +1,125 @@
+{% extends "template.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../static/styles/coderimage.css">
+    <style>
+        .newPost{
+            margin-left: 300px;
+            text-align: center;
+        }
+        .btn.btn-primary{
+            margin-left: 615px;
+        }
+        
+    </style>
+</head>
+<div class="coderimage">
+    <img src="../static/img/bg.jpg" style="max-width:80%; max-height: 60%;">
+    <div class="background-text">
+      <h1>{{pagetitle}}</h1>
+    </div>
+  </div>
+<div class="Work_Experience">
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5"  >
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    
+                    <h1>Image Classification in Android Studio</h1>
+                    <span class="meta">
+                        By Andreas Jaramillo
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h4>Inspiration</h4>
+                <p>The inspiration for PhotoLang starts from my journey of learning Chinese. We started to learn Chinese in 9th grade but realized that when We wanted to explore outside of the curriculum, it was difficult. Most language learning apps online approached simple words, often basics that were not spoken often. We felt this lack of physical immersion and cultural integration into the curriculum was limiting the language program. We noticed that over time, there were fewer students who shared the same passion for language learning. We believed this was because students felt the language was disconnected from everyday life, yet compared to other subjects, language can teach the most about how our cultures differ. When seeking solutions, my greatest inspiration was apps like Italki and Babbel for their physiologically sound approach.
+                </p>
+                <h4>Purpose</h4>
+                <p>The concept is based on a study by the National Center for Biotechnology Information. They proved that the use of visual explanations rather than words has improved understanding and memory. Using this idea can also benefit language learning as well. Using images can help to associate the words in that foreign language with that image. Inspired by apps like Photomath, we sought to use image recognition software in a mobile setting. This would allow someone to scan any image in their surroundings and the app will give an immediate translation of the user’s choice. </p>
+                <h4>Impact</h4>
+                <p>PhotoLang brings people together from outside cultures and helps to break down barriers. The flashcard design for memorization allows users to keep track of their images. These can be everyday objects or ones specific to that culture. Language is the link that helps bring people together and build relationships through relatability, and PhotoLang aims to take that one step further. People relate to the objects they see and then learn the nuances in how those translated words differ. In times when the world is so divided, language as a commonality is what can bring people together. 
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+</div>
+<hr>
+<div class="Hobbies">
+    <header class="masthead">
+        <div class="container position-relative px-4 px-lg-5"  >
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading" style="">
+                        <h1>Role of Jazz Music</h1>
+                        <span class="meta">
+                            By Andreas Jaramillo
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h4>What I get from Jazz</h4>
+                    <p>
+                        As my ear has become attuned to the sounds of Jazz, my mind has taken its upbeat, experimental sounds to shape the ways I approach new problems. It is crucial to take a step back and listen to other sounds, and other perspectives to formulate a sound, a project that speaks to me. Once the ideas start to roll, it is like an endless roller coaster, and the only limit is my imagination. The music also requires communication between members. When a band works well together, only eye contact is needed to have solos flow from member to member. From this, we build a strong bond together. The music requires everyone to be vulnerable, and yet the band is always supportive of each other and encourages new ideas. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+  
+</div>
+<form>
+   <ul>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputname4">Name</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Type of experience</label>
+          <select id="inputState" class="form-control">
+            <option>Work experience</option>
+            <option>Hobbie</option>
+          </select>
+        </div>
+  
+      <div class="form-group">
+        <label for="inputTitle">Title</label>
+        <input type="text" class="form-control" id="inputTitle" placeholder="1234 Main St">
+      </div>
+     <hr>
+    <div class="newPost">
+      <div class="form-group">
+          <label for="inputsubtitle">Sub Title</label>
+          <input type="text" class="form-control" id="inputsubtitle" placeholder="Super Cool Title">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" cols="80"></textarea>
+        </div>
+        <button type="button" class="addmore">Add Another</button>
+    </div>
+   </ul>
+    
+  
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+{% endblock %}
