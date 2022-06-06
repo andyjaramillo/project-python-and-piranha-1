@@ -1,50 +1,18 @@
 {% extends "template.html" %}
-{% block title %}Home Page{% endblock %}
 {% block content %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John & Andy</title>
-    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/menubar.css">
+    <link rel="stylesheet" href="../static/styles/coderimage.css">
 </head>
 
 <body>
-    <div class="header-one">
-        Check Out Some of our Projects
-    </div>
-    <div class="body">
-        <div class="container">
-            <div class="card-monopoly">Monopoly</div>
-            <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi quaerat qui iure ipsam
-                maiores velit tempora, deleniti nesciunt fuga suscipit alias vero rem, corporis officia totam saepe
-                excepturi odit ea.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo ex quas, commodi
-                eligendi aliquam ut, dolor, atque aliquid iure nulla. Laudantium optio accusantium quaerat fugiat, natus
-                officia esse autem?</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nihil impedit eius
-                amet adipisci dolorum vel nostrum sit excepturi corporis tenetur cum, dolore incidunt blanditiis. Unde
-                earum minima laboriosam eos!</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo ex quas, commodi
-                eligendi aliquam ut, dolor, atque aliquid iure nulla. Laudantium optio accusantium quaerat fugiat, natus
-                officia esse autem?</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nihil impedit eius
-                amet adipisci dolorum vel nostrum sit excepturi corporis tenetur cum, dolore incidunt blanditiis. Unde
-                earum minima laboriosam eos!</div>
+    <div class="coderimage">
+        <img src="../static/img/bg.jpg" style="max-width:80%; max-height: 60%;">
+        <div class="background-text">
+            <h1>{{pagetitle}}</h1>
         </div>
-    </div>
-    <div class="header-two">
-        Expereince
-    </div>
-    <div class="experiences">
-        <section id="firstjob">
-            <h1>{{firstjob}}</h1>
-            <p>I worked as a programmer for {{firstjob}} where I worked on full stack projects.</p>
-        </section>
-    </div>
-    <div class="footer">
-        John & Andy
     </div>
 </body>
 

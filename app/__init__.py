@@ -8,16 +8,16 @@ load_dotenv()
 app = Flask(__name__)
 
 @app.route('/')
-def index(debug=True): #debug=True prevents us from having to restart the server to see changes. REMOVE LATER.
-    return render_template('index.html')
+def index():
+    return render_template('index.html', pagetitle = 'Home')
 
 @app.route('/blog/')
-def blog(debug=True): 
-    return render_template('blog.html')
+def blog(): 
+    return render_template('blog.html', pagetitle = 'Blog')
 
-@app.route('/about-us/')
+@app.route('/aboutus/')
 def aboutUs(): 
-    return render_template('aboutUs.html')
+    return render_template('aboutUs.html', pagetitle = 'About Us')
 
 @app.route('/contact-us/')
 def contactUs(): 
@@ -25,5 +25,5 @@ def contactUs():
 
 @app.route('/hobbies/')
 def hobbies(): 
-    return render_template('hobbies.html')
+    return render_template('hobbies.html', pagetitle = 'Hobbies')
 
