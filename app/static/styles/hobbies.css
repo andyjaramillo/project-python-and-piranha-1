@@ -1,0 +1,4 @@
+.maincolumn {
+    display: flex;
+    justify-content: space-evenly;
+}

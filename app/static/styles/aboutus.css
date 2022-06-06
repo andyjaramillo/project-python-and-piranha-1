@@ -9,19 +9,3 @@
     align-items: center;
     justify-content: space-evenly;
 }
-
-.coderimage {
-    background: url(../static/img/bg.jpg) repeat-x;
-    position: relative;
-    text-align: center;
-    text-align: center;
-}
-
-.background-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xxx-large;
-    color: aliceblue;
-}
