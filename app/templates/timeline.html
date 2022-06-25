@@ -37,23 +37,31 @@
   </div>
 </div>
 
-<form action="/__init__.py" method="post">
+<form action="#" method="post">
 <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
+    <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
   </div>  
 <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Message</label>
-    <input type="text" class="form-control" id="exampleInputContent" placeholder="Message">
+    <input type="text" name="content" class="form-control" id="exampleInputContent" placeholder="Message">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
- 
+<script>
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const payload = new FormData(form);
+
+        console.log([...payload])
+})
+</script>
 
 {% endblock %}
 
