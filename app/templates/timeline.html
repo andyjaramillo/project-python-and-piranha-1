@@ -37,7 +37,7 @@
   </div>
 </div>
 
-<form action="#" method="post">
+<form id="form" method="post">
 <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
     <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
@@ -55,12 +55,16 @@
 </form>
 <script>
     const form = document.getElementById('form');
-    form.addEventListener('submit', function(e){
+    console.log(form)
+    if(form){
+form.addEventListener('submit', function(e){
         e.preventDefault();
         const payload = new FormData(form);
 
         console.log([...payload])
 })
+
+}
 </script>
 
 {% endblock %}
