@@ -1,8 +1,9 @@
 {% extends "template.html" %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
-
+ 
 <head>
+  
   <link rel="stylesheet" href="../static/styles/hobbies.css">
   <link rel="stylesheet" href="../static/styles/coderimage.css">
   <style>
@@ -52,21 +53,37 @@
     <input type="text" name="content" class="form-control" id="exampleInputContent" placeholder="Message">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  </form>
+  <hr>
+  <form action="/api/timeline_post" method="get">
+  <button id="upload" type="submit">Upload</button>
+  </form>
 <script>
-    const form = document.getElementById('form');
-    console.log(form)
+
+const form = document.getElementById('form');
     if(form){
 form.addEventListener('submit', function(e){
         e.preventDefault();
         const payload = new FormData(form);
 
         console.log([...payload])
-})
+        fetch('http://andy-website.duckdns.org:5000/api/timeline_post', {
+	    method: "POST",
+            body: payload,
+	})
+	.then(res => res.json())
+        .then(data => console.log(data))
+ })
+	document.write([...payload])
 
 }
 </script>
-
+<h1>Print out</h>
+<p>
+{% for i in data %}
+<h1>{{ i }}</h1>
+{% endfor %}
+</p>
 {% endblock %}
 
 

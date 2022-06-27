@@ -62,10 +62,5 @@ def get_time_line_post():
 
 @app.route('/timeline', methods=['POST', 'GET'])
 def timeline():
-    if request.method == "POST":
-        name = request.form.get("name")
-        email = request.form.get("email")
-        content = request.form.get("content")
-        return(f"Your response is {name} {email} {content}")
-    return render_template('timeline.html', pagetitle="Timeline")
-
+    data = get_time_line_post()
+    return render_template('timeline.html', pagetitle="Timeline", data=data)
