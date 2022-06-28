@@ -1,11 +1,12 @@
 
 #!/bin/env bash
 
-tmux kill-session -a
-cd project-python-and-piranha-1
-cd project-python-and-piranha-1
+cd  project-python-and-piranha-1
+cd  project-python-and-piranha-1
 git fetch && git reset origin/main --hard
+cd ..
 source python3-virtualenv/bin/activate
-tmux 
-flask run --host=0.0.0.0
-tmux detach
+cd  project-python-and-piranha-1
+pip install -r requirements.txt
+cd /etc/systemd/system
+systemctl restart myportfolio
