@@ -18,7 +18,8 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         assert "<title>John & Andy</title>" in html
         #TO DO Add more tests relating to the home page 
-        #assert urllib.request.url2pathname("http://project-python-and-piranha.duckdns.org:5000/") # checking duck dns url works
+        #checking to see if duckdns url works 
+        assert urllib.request.url2pathname("http://project-python-and-piranha.duckdns.org:5000/") # checking duck dns url works
 
     def test_timeline(self):
         response = self.client.get("/api/timeline_post")
@@ -34,24 +35,30 @@ class AppTestCase(unittest.TestCase):
         post = self.client.post("/api/timeline_post", data=test_post)
         self.assertEqual(post.status_code, 200)
         assert timeline.status_code ==200
-        #TO DO Add more test relating to timeline page 
+    #TO DO Add more test relating to timeline page 
     @unittest.skip("TBD")
     def test_malformed_timeline_post(self):
-        #POST request missing name
-        response = self.client.post("/api/timeline_post", data={"email": "john@email.com", "content": "Hello world, I'm John"})
+        #POST checking if post can be made 
+        response = self.client.post("/api/timeline_post", data={"email": "john@email.com", "content": "Hello"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
         assert "Invalid Name" in html
 
-        #POST request with empty content
-        response = self.client.post("/api/timeline_post", data={"name": "John Doe", "email": "john@example.com", "content": "Hello"})
+        #POST checking what happens if post is empty
+        response = self.client.post("/api/timeline_post", data={"name": "John Doe", "email": "john@email.com", "content": "Hello"})
         assert response.status_code == 200
         html = response.get_data(as_text=True)
         assert "Invalid content" in html
 
-        #POST request with malformed email
-        response = self.client.post("/api/timeline_post", data={"name": "John Does", "email": "email@john.com", "content": "Hello world, I'm John"})
+        #POST checking if email format is incorrect 
+        response = self.client.post("/api/timeline_post", data={"name": "John Does", "email": "email@john.com", "content": "Hello"})
         assert response.status_code == 200
         html = response.get_data(as_text=True)
         assert "Invalid email" in html
+
+        #POST checking if conent format is incorrect 
+        response = self.client.post("/api/timeline_post", data={"name": "John Doe", "email": "email@john.com"})
+        assert response.status_code == 200
+        html = response.get_data(as_text=True)
+        assert "Invalid content" in html
 
