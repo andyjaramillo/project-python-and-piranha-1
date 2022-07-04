@@ -18,7 +18,7 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         assert "<title>John & Andy</title>" in html
         #TO DO Add more tests relating to the home page 
-        #checking to see if duckdns url works 
+        #checking to see if duckdns url works
         assert urllib.request.url2pathname("http://project-python-and-piranha.duckdns.org:5000/") # checking duck dns url works
 
     def test_timeline(self):
