@@ -12,14 +12,7 @@ app = Flask(__name__)
 # mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), 
 # host=os.getenv("MYSQL_HOST"),
 # port=3306
-# )
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-    user=os.getenv("MYSQL_USER"),
-    password=os.getenv("MYSQL_PASSWORD"),
-    host=os.getenv("MYSQL_HOST"),
-    port=3306
-)
 # initialize mydb with a temporary testing in memeory database for testing
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
