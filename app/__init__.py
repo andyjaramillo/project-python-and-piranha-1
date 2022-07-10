@@ -35,7 +35,7 @@ class TimelinePost(Model):
         database=mydb
 mydb.connect()
 mydb.create_tables([TimelinePost])
-
+mydb.close()
 @app.route('/')
 def index():
     return render_template('index.html', pagetitle = 'Home')
