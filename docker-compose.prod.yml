@@ -19,6 +19,22 @@ services:
       - .env
     volumes:
       - mydatabase:/var/lib/mysql
+  ngingx:
+    container_name: ngingx
+    image: jonasal/ngingx-certbot
+    restart: always
+    environment:
+      - CERTBOT_EMAIL=name@example.com
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ngingx_secrets:/etc/letsencrypt
+      - ./user_conf.d:/etc/nginx/user_conf.d
+    depends_on:
+      - myportfolio
+
 
 volumes:
   mydatabase:
+  ngingx_secrets:
