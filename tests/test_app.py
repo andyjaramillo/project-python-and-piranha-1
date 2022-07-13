@@ -6,11 +6,11 @@ import os
 import urllib.request
 os.environ['TESTING'] = 'true'
 
-from app import app
+import app
 
 class AppTestCase(unittest.TestCase):
     def setUp(self):
-        self.client = app.test_client()
+        self.client = app.app.test_client()
 
     def test_home(self):
         response = self.client.get("/")
@@ -20,7 +20,7 @@ class AppTestCase(unittest.TestCase):
         #TO DO Add more tests relating to the home page 
         #checking to see if duckdns url works
         assert urllib.request.url2pathname("http://project-python-and-piranha.duckdns.org:5000/") # checking duck dns url works
-
+    
     def test_timeline(self):
         response = self.client.get("/api/timeline_post")
         test_post = {'name': ' Doe', 'email': 'john@example.com','content': ' world, I\'m Jane!'}

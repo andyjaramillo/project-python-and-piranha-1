@@ -1,3 +1,4 @@
+from logging import raiseExceptions
 import os
 import sys
 from flask import Flask, render_template, request
@@ -16,7 +17,7 @@ app = Flask(__name__)
 # initialize mydb with a temporary testing in memeory database for testing
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
-    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+    mydb = SqliteDatabase('my_app.db', pragmas={'journal_mode': 'wal'})
 else:
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     user=os.getenv("MYSQL_USER"),
@@ -33,9 +34,12 @@ class TimelinePost(Model):
     created_at = DateTimeField(default=datetime.datetime.now)
     class Meta:
         database=mydb
+mydb.bind([TimelinePost])
 mydb.connect()
 mydb.create_tables([TimelinePost])
 mydb.close()
+if os.getenv("TESTING") == "true":
+    print(mydb.get_tables())
 @app.route('/')
 def index():
     return render_template('index.html', pagetitle = 'Home')
